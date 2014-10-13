@@ -45,6 +45,7 @@ namespace Sample.Plugin
             Plugin.PHost.NewPlayerEntity += OnNewPlayerEntity;
             Plugin.PHost.NewTargetEntity += OnNewTargetEntity;
             Plugin.PHost.NewPartyEntries += OnNewPartyEntries;
+            Plugin.PHost.NewInventoryEntries += OnNewInventoryEntries;
         }
 
         public static void UnSubscribe()
@@ -57,6 +58,7 @@ namespace Sample.Plugin
             Plugin.PHost.NewPlayerEntity -= OnNewPlayerEntity;
             Plugin.PHost.NewTargetEntity -= OnNewTargetEntity;
             Plugin.PHost.NewPartyEntries -= OnNewPartyEntries;
+            Plugin.PHost.NewInventoryEntries -= OnNewInventoryEntries;
         }
 
         #region Subscriptions
@@ -170,6 +172,16 @@ namespace Sample.Plugin
                 return;
             }
             var partyEntities = partyEntitiesEvent.PartyEntities;
+        }
+
+        private static void OnNewInventoryEntries(object sender, InventoryEntitiesEvent inventoryEntitiesEvent)
+        {
+            // delegate event from inventory info worker that will give all inventory items across any and all bags except retainers
+            if (sender == null)
+            {
+                return;
+            }
+            var inventoryEntities = inventoryEntitiesEvent.InventoryEntities;
         }
 
         #endregion
