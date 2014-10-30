@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Plugin", "Sample.Plugin\Sample.Plugin.csproj", "{BDF0777F-306F-464C-A30B-3FAE6CDDF527}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Plugin", "Sample.Plugin\Sample.Plugin.csproj", "{A5FC9B05-33BB-4169-8881-573549414A17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BF238003-1271-4A6F-B936-3EBAF1509D04}"
 	ProjectSection(SolutionItems) = preProject
