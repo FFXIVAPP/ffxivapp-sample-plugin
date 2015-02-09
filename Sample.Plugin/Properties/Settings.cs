@@ -208,9 +208,13 @@ namespace Sample.Plugin.Properties
             {
                 var element = enumerable.FirstOrDefault(e => e.Attribute("Key")
                                                               .Value == setting);
+                var xKey = setting;
+                if (Default[xKey] == null)
+                {
+                    continue;
+                }
                 if (element == null)
                 {
-                    var xKey = setting;
                     var xValue = Default[xKey].ToString();
                     var keyPairList = new List<XValuePair>
                     {

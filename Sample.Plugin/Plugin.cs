@@ -90,7 +90,14 @@ namespace Sample.Plugin
                 {
                     try
                     {
-                        _locale.Add(resource.Key, resource.Value);
+                        if (_locale.ContainsKey(resource.Key))
+                        {
+                            _locale[resource.Key] = resource.Value;
+                        }
+                        else
+                        {
+                            _locale.Add(resource.Key, resource.Value);
+                        }
                     }
                     catch (Exception ex)
                     {

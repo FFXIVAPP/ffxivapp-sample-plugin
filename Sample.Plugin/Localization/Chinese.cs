@@ -1,5 +1,5 @@
 ﻿// Sample.Plugin
-// LocaleHelper.cs
+// English.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
 // 
@@ -27,51 +27,25 @@
 // ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE 
 // POSSIBILITY OF SUCH DAMAGE. 
 
-using System.Collections;
-using System.Collections.Generic;
-using System.Globalization;
-using System.Linq;
 using System.Windows;
-using Sample.Plugin.Localization;
 
-namespace Sample.Plugin.Helpers
+namespace Sample.Plugin.Localization
 {
-    internal static class LocaleHelper
+    public abstract class Chinese
     {
+        private static readonly ResourceDictionary Dictionary = new ResourceDictionary();
+
         /// <summary>
         /// </summary>
-        /// <param name="cultureInfo"> </param>
-        public static Dictionary<string, string> Update(CultureInfo cultureInfo)
+        /// <returns> </returns>
+        public static ResourceDictionary Context()
         {
-            var culture = cultureInfo.TwoLetterISOLanguageName;
-            ResourceDictionary dictionary;
-            if (Constants.Supported.Contains(culture))
-            {
-                switch (culture)
-                {
-                    case "fr":
-                        dictionary = French.Context();
-                        break;
-                    case "ja":
-                        dictionary = Japanese.Context();
-                        break;
-                    case "de":
-                        dictionary = German.Context();
-                        break;
-                    case "zh":
-                        dictionary = Chinese.Context();
-                        break;
-                    default:
-                        dictionary = English.Context();
-                        break;
-                }
-            }
-            else
-            {
-                dictionary = English.Context();
-            }
-            return dictionary.Cast<DictionaryEntry>()
-                             .ToDictionary(item => (string) item.Key, item => (string) item.Value);
+            Dictionary.Clear();
+            Dictionary.Add("sample_", "PLACEHOLDER");
+            Dictionary.Add("sample_ChatLogTabHeader", "Chat");
+            Dictionary.Add("sample_ClearChatLogMessage", "Clear ChatLogFD");
+            Dictionary.Add("sample_ClearChatLogToolTip", "Clear Chat");
+            return Dictionary;
         }
     }
 }

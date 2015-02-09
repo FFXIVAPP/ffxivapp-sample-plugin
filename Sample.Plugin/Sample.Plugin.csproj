@@ -86,6 +86,7 @@
     <Compile Include="EventSubscriber.cs" />
     <Compile Include="Initializer.cs" />
     <Compile Include="Helpers\LocaleHelper.cs" />
+    <Compile Include="Localization\Chinese.cs" />
     <Compile Include="Localization\English.cs" />
     <Compile Include="Localization\French.cs" />
     <Compile Include="Localization\German.cs" />
