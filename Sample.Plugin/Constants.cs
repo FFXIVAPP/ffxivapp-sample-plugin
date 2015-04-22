@@ -33,6 +33,7 @@ using System.Globalization;
 using System.IO;
 using System.Reflection;
 using System.Xml.Linq;
+using FFXIVAPP.Common.Core.Constant;
 using FFXIVAPP.Common.Helpers;
 
 namespace Sample.Plugin
@@ -111,6 +112,7 @@ namespace Sample.Plugin
         private static Dictionary<string, string> _chatCodes;
         private static Dictionary<string, string[]> _colors;
         private static CultureInfo _cultureInfo;
+        private static Dictionary<string, ActionInfo> _actions;
 
         public static Dictionary<string, string> AutoTranslate
         {
@@ -122,6 +124,12 @@ namespace Sample.Plugin
         {
             get { return _chatCodes ?? (_chatCodes = new Dictionary<string, string>()); }
             set { _chatCodes = value; }
+        }
+
+        public static Dictionary<string, ActionInfo> Actions
+        {
+            get { return _actions ?? (_actions = new Dictionary<string, ActionInfo>()); }
+            set { _actions = value; }
         }
 
         public static string ChatCodesXml { get; set; }

@@ -46,6 +46,7 @@ namespace Sample.Plugin
             Plugin.PHost.NewTargetEntity += OnNewTargetEntity;
             Plugin.PHost.NewPartyEntries += OnNewPartyEntries;
             Plugin.PHost.NewInventoryEntries += OnNewInventoryEntries;
+            Plugin.PHost.NewNetworkPacket += OnNewNetworkPacket;
         }
 
         public static void UnSubscribe()
@@ -59,6 +60,7 @@ namespace Sample.Plugin
             Plugin.PHost.NewTargetEntity -= OnNewTargetEntity;
             Plugin.PHost.NewPartyEntries -= OnNewPartyEntries;
             Plugin.PHost.NewInventoryEntries -= OnNewInventoryEntries;
+            Plugin.PHost.NewNetworkPacket -= OnNewNetworkPacket;
         }
 
         #region Subscriptions
@@ -73,6 +75,7 @@ namespace Sample.Plugin
             var constantsEntity = constantsEntityEvent.ConstantsEntity;
             Constants.AutoTranslate = constantsEntity.AutoTranslate;
             Constants.ChatCodes = constantsEntity.ChatCodes;
+            Constants.Actions = constantsEntity.Actions;
             Constants.Colors = constantsEntity.Colors;
             Constants.CultureInfo = constantsEntity.CultureInfo;
             Constants.CharacterName = constantsEntity.CharacterName;
@@ -182,6 +185,24 @@ namespace Sample.Plugin
                 return;
             }
             var inventoryEntities = inventoryEntitiesEvent.InventoryEntities;
+        }
+
+        private static void OnNewNetworkPacket(object sender, NetworkPacketEvent networkPacketEvent)
+        {
+            // delegate event from network worker, this will be all incoming packets for the game
+            if (sender == null)
+            {
+                return;
+            }
+            var networkPacket = networkPacketEvent.Packet;
+            // networkPacket.Key is unique for each type of packet
+            // you will have to implement your own parsing of the newPacket.Message/Buffer after this
+            // packets are already decrypted
+            switch (networkPacket.Key)
+            {
+                default:
+                    break;
+            }
         }
 
         #endregion
