@@ -39,12 +39,20 @@ namespace Sample.Plugin
         {
             Plugin.PHost.NewConstantsEntity += OnNewConstantsEntity;
             Plugin.PHost.NewChatLogEntry += OnNewChatLogEntry;
+            Plugin.PHost.NewMonsterEntriesAdded += OnNewMonsterEntriesAdded;
             Plugin.PHost.NewMonsterEntries += OnNewMonsterEntries;
+            Plugin.PHost.NewMonsterEntriesRemoved += OnNewMonsterEntriesRemoved;
+            Plugin.PHost.NewNPCEntriesAdded += OnNewNPCEntriesAdded;
             Plugin.PHost.NewNPCEntries += OnNewNPCEntries;
+            Plugin.PHost.NewNPCEntriesRemoved += OnNewNPCEntriesRemoved;
+            Plugin.PHost.NewPCEntriesAdded += OnNewPCEntriesAdded;
             Plugin.PHost.NewPCEntries += OnNewPCEntries;
+            Plugin.PHost.NewPCEntriesRemoved += OnNewPCEntriesRemoved;
             Plugin.PHost.NewPlayerEntity += OnNewPlayerEntity;
             Plugin.PHost.NewTargetEntity += OnNewTargetEntity;
+            Plugin.PHost.NewPartyEntriesAdded += OnNewPartyEntriesAdded;
             Plugin.PHost.NewPartyEntries += OnNewPartyEntries;
+            Plugin.PHost.NewPartyEntriesRemoved += OnNewPartyEntriesRemoved;
             Plugin.PHost.NewInventoryEntries += OnNewInventoryEntries;
             Plugin.PHost.NewNetworkPacket += OnNewNetworkPacket;
         }
@@ -53,12 +61,20 @@ namespace Sample.Plugin
         {
             Plugin.PHost.NewConstantsEntity -= OnNewConstantsEntity;
             Plugin.PHost.NewChatLogEntry -= OnNewChatLogEntry;
+            Plugin.PHost.NewMonsterEntriesAdded -= OnNewMonsterEntriesAdded;
             Plugin.PHost.NewMonsterEntries -= OnNewMonsterEntries;
+            Plugin.PHost.NewMonsterEntriesRemoved -= OnNewMonsterEntriesRemoved;
+            Plugin.PHost.NewNPCEntriesAdded -= OnNewNPCEntriesAdded;
             Plugin.PHost.NewNPCEntries -= OnNewNPCEntries;
+            Plugin.PHost.NewNPCEntriesRemoved -= OnNewNPCEntriesRemoved;
+            Plugin.PHost.NewPCEntriesAdded -= OnNewPCEntriesAdded;
             Plugin.PHost.NewPCEntries -= OnNewPCEntries;
+            Plugin.PHost.NewPCEntriesRemoved -= OnNewPCEntriesRemoved;
             Plugin.PHost.NewPlayerEntity -= OnNewPlayerEntity;
             Plugin.PHost.NewTargetEntity -= OnNewTargetEntity;
+            Plugin.PHost.NewPartyEntriesAdded -= OnNewPartyEntriesAdded;
             Plugin.PHost.NewPartyEntries -= OnNewPartyEntries;
+            Plugin.PHost.NewPartyEntriesRemoved -= OnNewPartyEntriesRemoved;
             Plugin.PHost.NewInventoryEntries -= OnNewInventoryEntries;
             Plugin.PHost.NewNetworkPacket -= OnNewNetworkPacket;
         }
@@ -104,11 +120,20 @@ namespace Sample.Plugin
             }
         }
 
+        private static void OnNewMonsterEntriesAdded(object sender, ActorEntitiesAddedEvent actorEntitiesAddedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is newly placed in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = actorEntitiesAddedEvent.Keys;
+        }
+
         private static void OnNewMonsterEntries(object sender, ActorEntitiesEvent actorEntitiesEvent)
         {
             // delegate event from monster entities from ram, not required to subsribe
-            // this updates 10x a second and only sends data if the items are found in ram
-            // currently there no change/new/removed event handling (looking into it)
+            // this is sent once, and by reference so you only need to use it after
             if (sender == null)
             {
                 return;
@@ -116,12 +141,30 @@ namespace Sample.Plugin
             var monsterEntities = actorEntitiesEvent.ActorEntities;
         }
 
+        private static void OnNewMonsterEntriesRemoved(object sender, ActorEntitiesRemovedEvent actorEntitiesRemovedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is no longer in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = actorEntitiesRemovedEvent.Keys;
+        }
+
+        private static void OnNewNPCEntriesAdded(object sender, ActorEntitiesAddedEvent actorEntitiesAddedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is newly placed in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = actorEntitiesAddedEvent.Keys;
+        }
+
         private static void OnNewNPCEntries(object sender, ActorEntitiesEvent actorEntitiesEvent)
         {
             // delegate event from npc entities from ram, not required to subsribe
-            // this list includes anything that is not a player or monster
-            // this updates 10x a second and only sends data if the items are found in ram
-            // currently there no change/new/removed event handling (looking into it)
+            // this is sent once, and by reference so you only need to use it after
             if (sender == null)
             {
                 return;
@@ -129,16 +172,45 @@ namespace Sample.Plugin
             var npcEntities = actorEntitiesEvent.ActorEntities;
         }
 
+        private static void OnNewNPCEntriesRemoved(object sender, ActorEntitiesRemovedEvent actorEntitiesRemovedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is no longer in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = actorEntitiesRemovedEvent.Keys;
+        }
+
+        private static void OnNewPCEntriesAdded(object sender, ActorEntitiesAddedEvent actorEntitiesAddedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is newly placed in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = actorEntitiesAddedEvent.Keys;
+        }
+
         private static void OnNewPCEntries(object sender, ActorEntitiesEvent actorEntitiesEvent)
         {
-            // delegate event from player entities from ram, not required to subsribe
-            // this updates 10x a second and only sends data if the items are found in ram
-            // currently there no change/new/removed event handling (looking into it)
+            // delegate event from pc entities from ram, not required to subsribe
+            // this is sent once, and by reference so you only need to use it after
             if (sender == null)
             {
                 return;
             }
             var pcEntities = actorEntitiesEvent.ActorEntities;
+        }
+
+        private static void OnNewPCEntriesRemoved(object sender, ActorEntitiesRemovedEvent actorEntitiesRemovedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is no longer in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = actorEntitiesRemovedEvent.Keys;
         }
 
         private static void OnNewPlayerEntity(object sender, PlayerEntityEvent playerEntityEvent)
@@ -167,14 +239,35 @@ namespace Sample.Plugin
             var targetEntity = targetEntityEvent.TargetEntity;
         }
 
+        private static void OnNewPartyEntriesAdded(object sender, PartyEntitiesAddedEvent partyEntitiesAddedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is newly placed in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = partyEntitiesAddedEvent.Keys;
+        }
+
         private static void OnNewPartyEntries(object sender, PartyEntitiesEvent partyEntitiesEvent)
         {
-            // delegate event from party info worker that will give basic info on party members
+            // delegate event from party entities from ram, not required to subsribe
+            // this is sent once, and by reference so you only need to use it after
             if (sender == null)
             {
                 return;
             }
             var partyEntities = partyEntitiesEvent.PartyEntities;
+        }
+
+        private static void OnNewPartyEntriesRemoved(object sender, PartyEntitiesRemovedEvent partyEntitiesRemovedEvent)
+        {
+            // delegate event that is sent everytime ram is read (10x a second) and if any entity is no longer in ram
+            if (sender == null)
+            {
+                return;
+            }
+            var keys = partyEntitiesRemovedEvent.Keys;
         }
 
         private static void OnNewInventoryEntries(object sender, InventoryEntitiesEvent inventoryEntitiesEvent)
