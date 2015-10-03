@@ -56,5 +56,21 @@ namespace Sample.Plugin.Utilities
                 Logging.Log(LogManager.GetCurrentClassLogger(), "", ex);
             }
         }
+
+        public static void WriteLine(string line)
+        {
+            try
+            {
+
+                FFXIVAPP.Common.Constants.FD.AppendFlow("", "", line, new[]
+                {
+                     "FFFFFF",  "FFFFFF"
+                }, MainView.View.ChatLogFD._FDR);
+            }
+            catch (Exception ex)
+            {
+                Logging.Log(LogManager.GetCurrentClassLogger(), "", ex);
+            }
+        }
     }
 }
