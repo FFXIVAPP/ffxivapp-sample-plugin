@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // Settings.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -47,7 +47,7 @@ using Color = System.Windows.Media.Color;
 using ColorConverter = System.Windows.Media.ColorConverter;
 using FontFamily = System.Drawing.FontFamily;
 
-namespace Sample.Plugin.Properties
+namespace ffxivmc.Plugin.Properties
 {
     internal class Settings : ApplicationSettingsBase, INotifyPropertyChanged
     {
@@ -64,7 +64,7 @@ namespace Sample.Plugin.Properties
             DefaultSettings();
             SaveSettingsNode();
             // I would make a function for each node itself; other examples such as log/event would showcase this
-            Constants.XSettings.Save(Path.Combine(FFXIVAPP.Common.Constants.PluginsSettingsPath, "Sample.Plugin.xml"));
+            Constants.XSettings.Save(Path.Combine(FFXIVAPP.Common.Constants.PluginsSettingsPath, "ffxivmc.Plugin.xml"));
         }
 
         private void DefaultSettings()

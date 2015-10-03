@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // ShellViewModel.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -30,9 +30,9 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using Sample.Plugin.Properties;
+using ffxivmc.Plugin.Properties;
 
-namespace Sample.Plugin
+namespace ffxivmc.Plugin
 {
     public sealed class ShellViewModel : INotifyPropertyChanged
     {

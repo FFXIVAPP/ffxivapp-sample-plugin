@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // Plugin.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -39,10 +39,10 @@ using FFXIVAPP.Common.Helpers;
 using FFXIVAPP.Common.Utilities;
 using FFXIVAPP.IPluginInterface;
 using NLog;
-using Sample.Plugin.Helpers;
-using Sample.Plugin.Properties;
+using ffxivmc.Plugin.Helpers;
+using ffxivmc.Plugin.Properties;
 
-namespace Sample.Plugin
+namespace ffxivmc.Plugin
 {
     [Export(typeof (IPlugin))]
     public class Plugin : IPlugin, INotifyPropertyChanged

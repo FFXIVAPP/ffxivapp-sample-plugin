@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // AboutViewModel.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -30,7 +30,7 @@
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 
-namespace Sample.Plugin.ViewModels
+namespace ffxivmc.Plugin.ViewModels
 {
     internal sealed class AboutViewModel : INotifyPropertyChanged
     {

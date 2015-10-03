@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // PluginViewModel.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -34,7 +34,7 @@ using System.Runtime.CompilerServices;
 using FFXIVAPP.Common.Events;
 using FFXIVAPP.Common.Helpers;
 
-namespace Sample.Plugin
+namespace ffxivmc.Plugin
 {
     internal sealed class PluginViewModel : INotifyPropertyChanged
     {

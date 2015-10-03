@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // Initializer.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -33,10 +33,10 @@ using System.Windows;
 using System.Windows.Media;
 using System.Xml.Linq;
 using FFXIVAPP.Common.Controls;
-using Sample.Plugin.Properties;
-using Sample.Plugin.Views;
+using ffxivmc.Plugin.Properties;
+using ffxivmc.Plugin.Views;
 
-namespace Sample.Plugin
+namespace ffxivmc.Plugin
 {
     internal static class Initializer
     {

@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // Constants.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -36,13 +36,13 @@ using System.Xml.Linq;
 using FFXIVAPP.Common.Core.Constant;
 using FFXIVAPP.Common.Helpers;
 
-namespace Sample.Plugin
+namespace ffxivmc.Plugin
 {
     public static class Constants
     {
         #region Declarations
 
-        public const string LibraryPack = "pack://application:,,,/Sample.Plugin;component/";
+        public const string LibraryPack = "pack://application:,,,/ffxivmc.Plugin;component/";
 
         public static readonly string[] Supported = new[]
         {
@@ -70,8 +70,8 @@ namespace Sample.Plugin
         {
             get
             {
-                var file = Path.Combine(FFXIVAPP.Common.Constants.PluginsSettingsPath, "Sample.Plugin.xml");
-                var legacyFile = "./Plugins/Sample.Plugin/Settings.xml";
+                var file = Path.Combine(FFXIVAPP.Common.Constants.PluginsSettingsPath, "ffxivmc.Plugin.xml");
+                var legacyFile = "./Plugins/ffxivmc.Plugin/Settings.xml";
                 if (_xSettings != null)
                 {
                     return _xSettings;

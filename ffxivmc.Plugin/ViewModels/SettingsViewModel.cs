@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // SettingsViewModel.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -34,9 +34,9 @@ using System.Windows.Input;
 using FFXIVAPP.Common.Events;
 using FFXIVAPP.Common.Models;
 using FFXIVAPP.Common.ViewModelBase;
-using Sample.Plugin.Views;
+using ffxivmc.Plugin.Views;
 
-namespace Sample.Plugin.ViewModels
+namespace ffxivmc.Plugin.ViewModels
 {
     internal sealed class SettingsViewModel : INotifyPropertyChanged
     {

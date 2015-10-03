@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // Chinese.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -29,7 +29,7 @@
 
 using System.Windows;
 
-namespace Sample.Plugin.Localization
+namespace ffxivmc.Plugin.Localization
 {
     public abstract class Chinese
     {

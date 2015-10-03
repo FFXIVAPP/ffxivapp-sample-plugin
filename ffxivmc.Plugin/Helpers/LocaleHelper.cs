@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // LocaleHelper.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -32,9 +32,9 @@ using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
 using System.Windows;
-using Sample.Plugin.Localization;
+using ffxivmc.Plugin.Localization;
 
-namespace Sample.Plugin.Helpers
+namespace ffxivmc.Plugin.Helpers
 {
     internal static class LocaleHelper
     {

@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // PluginException.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -30,7 +30,7 @@
 using System;
 using System.Runtime.Serialization;
 
-namespace Sample.Plugin
+namespace ffxivmc.Plugin
 {
     [Serializable]
     public class PluginException : Exception

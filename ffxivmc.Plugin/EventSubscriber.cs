@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // EventSubscriber.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -29,9 +29,9 @@
 
 using System;
 using FFXIVAPP.IPluginInterface.Events;
-using Sample.Plugin.Utilities;
+using ffxivmc.Plugin.Utilities;
 
-namespace Sample.Plugin
+namespace ffxivmc.Plugin
 {
     public static class EventSubscriber
     {

@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // LogPublisher.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -31,10 +31,10 @@ using System;
 using FFXIVAPP.Common.Core.Memory;
 using FFXIVAPP.Common.Utilities;
 using NLog;
-using Sample.Plugin.Properties;
-using Sample.Plugin.Views;
+using ffxivmc.Plugin.Properties;
+using ffxivmc.Plugin.Views;
 
-namespace Sample.Plugin.Utilities
+namespace ffxivmc.Plugin.Utilities
 {
     public static class LogPublisher
     {

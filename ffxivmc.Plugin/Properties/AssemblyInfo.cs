@@ -1,4 +1,4 @@
-﻿// Sample.Plugin
+﻿// ffxivmc.Plugin
 // AssemblyInfo.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
@@ -34,11 +34,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 
-[assembly: AssemblyTitle("Sample.Plugin")]
+[assembly: AssemblyTitle("ffxivmc.Plugin")]
 [assembly: AssemblyDescription("Description")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("CompanyName")]
-[assembly: AssemblyProduct("Sample.Plugin")]
+[assembly: AssemblyProduct("ffxivmc.Plugin")]
 [assembly: AssemblyCopyright("Copyright © 2007-2012 Your Name")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]

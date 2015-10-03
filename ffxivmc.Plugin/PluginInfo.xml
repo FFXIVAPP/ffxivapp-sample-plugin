@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <PluginInfo>
   <Main Key="FileName">
-    <Value>Sample.Plugin.dll</Value>
+    <Value>ffxivmc.Plugin.dll</Value>
   </Main>
 </PluginInfo>
