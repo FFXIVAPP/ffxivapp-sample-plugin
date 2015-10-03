@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
-VisualStudioVersion = 12.0.21005.1
+VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sample.Plugin", "Sample.Plugin\Sample.Plugin.csproj", "{A5FC9B05-33BB-4169-8881-573549414A17}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ffxivmc", "ffxivmc.Plugin\ffxivmc.csproj", "{A5FC9B05-33BB-4169-8881-573549414A17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BF238003-1271-4A6F-B936-3EBAF1509D04}"
 	ProjectSection(SolutionItems) = preProject
@@ -18,10 +18,10 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{BDF0777F-306F-464C-A30B-3FAE6CDDF527}.Debug|x86.ActiveCfg = Debug|x86
-		{BDF0777F-306F-464C-A30B-3FAE6CDDF527}.Debug|x86.Build.0 = Debug|x86
-		{BDF0777F-306F-464C-A30B-3FAE6CDDF527}.Release|x86.ActiveCfg = Release|x86
-		{BDF0777F-306F-464C-A30B-3FAE6CDDF527}.Release|x86.Build.0 = Release|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Debug|x86.ActiveCfg = Debug|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Debug|x86.Build.0 = Debug|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|x86.ActiveCfg = Release|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
