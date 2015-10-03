@@ -111,13 +111,7 @@ namespace Sample.Plugin
                 return;
             }
             var chatLogEntry = chatLogEntryEvent.ChatLogEntry;
-            try
-            {
-                LogPublisher.Process(chatLogEntry);
-            }
-            catch (Exception ex)
-            {
-            }
+
         }
 
         private static void OnNewMonsterEntriesAdded(object sender, ActorEntitiesAddedEvent actorEntitiesAddedEvent)
@@ -291,8 +285,35 @@ namespace Sample.Plugin
             // networkPacket.Key is unique for each type of packet
             // you will have to implement your own parsing of the newPacket.Message/Buffer after this
             // packets are already decrypted
+
+            //BitConverter.ToString(networkPacket.Buffer)
+
+            //LogPublisher.WriteLine(debug_output);
+            //Logging.Log(LogManager.GetCurrentClassLogger(), debug_output);
+
+
             switch (networkPacket.Key)
             {
+                case 17563668:
+                    //?? market related
+                    break;
+                case 17039380:
+                    //?? market related
+                    break;
+                case 17367060:
+                    //?? market related
+                    break;
+
+                case 17104916:
+                    if (networkPacket.MessageSize != 1160)
+                    {
+                        LogPublisher.WriteLine("invalid order list, wrong size");
+                        break;
+                    }
+                    //list of market orders
+                    //MarketParser.ParseOrderList(networkPacket.Buffer);
+
+                    break;
                 default:
                     break;
             }
