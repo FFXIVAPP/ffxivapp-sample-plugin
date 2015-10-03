@@ -30,6 +30,9 @@
 using System;
 using FFXIVAPP.IPluginInterface.Events;
 using ffxivmc.Plugin.Utilities;
+using FFXIVAPP.Common.Utilities;
+using NLog;
+using ffxivmc.Plugin.MarketData;
 
 namespace ffxivmc.Plugin
 {
@@ -37,6 +40,10 @@ namespace ffxivmc.Plugin
     {
         public static void Subscribe()
         {
+            Logging.Log(LogManager.GetCurrentClassLogger(), "subscribing");
+
+
+
             Plugin.PHost.NewConstantsEntity += OnNewConstantsEntity;
             Plugin.PHost.NewChatLogEntry += OnNewChatLogEntry;
             Plugin.PHost.NewMonsterEntriesAdded += OnNewMonsterEntriesAdded;
@@ -111,7 +118,6 @@ namespace ffxivmc.Plugin
                 return;
             }
             var chatLogEntry = chatLogEntryEvent.ChatLogEntry;
-
         }
 
         private static void OnNewMonsterEntriesAdded(object sender, ActorEntitiesAddedEvent actorEntitiesAddedEvent)
@@ -276,6 +282,7 @@ namespace ffxivmc.Plugin
 
         private static void OnNewNetworkPacket(object sender, NetworkPacketEvent networkPacketEvent)
         {
+            Logging.Log(LogManager.GetCurrentClassLogger(), "new packet");
             // delegate event from network worker, this will be all incoming packets for the game
             if (sender == null)
             {
@@ -292,7 +299,7 @@ namespace ffxivmc.Plugin
             //Logging.Log(LogManager.GetCurrentClassLogger(), debug_output);
 
 
-            switch (networkPacket.Key)
+                switch (networkPacket.Key)
             {
                 case 17563668:
                     //?? market related
@@ -311,7 +318,12 @@ namespace ffxivmc.Plugin
                         break;
                     }
                     //list of market orders
-                    //MarketParser.ParseOrderList(networkPacket.Buffer);
+                    try {
+                        MarketParser.ParseOrderList(networkPacket.Buffer);
+                    } catch (Exception)
+                    {
+                        LogPublisher.WriteLine("exception encountered with parsing");
+                    }
 
                     break;
                 default:

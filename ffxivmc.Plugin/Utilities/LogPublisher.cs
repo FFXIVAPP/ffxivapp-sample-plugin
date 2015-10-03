@@ -62,7 +62,7 @@ namespace ffxivmc.Plugin.Utilities
             try
             {
 
-                FFXIVAPP.Common.Constants.FD.AppendFlow("", "", line, new[]
+                FFXIVAPP.Common.Constants.FD.AppendFlow("","",line, new[]
                 {
                      "FFFFFF",  "FFFFFF"
                 }, MainView.View.ChatLogFD._FDR);

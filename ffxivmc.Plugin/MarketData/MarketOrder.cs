@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json.Linq;
+﻿
+using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -42,7 +43,7 @@ namespace ffxivmc.Plugin.MarketData
             return String.Format("Item: {0} Price: {1} Quantity: {2} HQ: {3} Total: {4} Retainer: {5}",
                 Item, Price, Quantity, HQ, Total, Retainer);
         }
-
+        
         public JObject ToJSON()
         {
             JObject Order = new JObject();
@@ -58,5 +59,4 @@ namespace ffxivmc.Plugin.MarketData
             return Order;
         }
     }
-
 }

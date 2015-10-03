@@ -80,6 +80,7 @@
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
     <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\ffxivapp-resources\System.Windows.Interactivity.dll</HintPath>
@@ -111,6 +112,9 @@
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ShellViewModel.cs" />
+    <Compile Include="Utilities\C.cs" />
+    <Compile Include="Utilities\Endpoints.cs" />
+    <Compile Include="Utilities\H.cs" />
     <Compile Include="Utilities\LogPublisher.cs" />
     <Compile Include="Utilities\T.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
