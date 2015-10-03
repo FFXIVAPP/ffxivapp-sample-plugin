@@ -282,7 +282,7 @@ namespace ffxivmc.Plugin
 
         private static void OnNewNetworkPacket(object sender, NetworkPacketEvent networkPacketEvent)
         {
-            Logging.Log(LogManager.GetCurrentClassLogger(), "new packet");
+            
             // delegate event from network worker, this will be all incoming packets for the game
             if (sender == null)
             {
@@ -312,6 +312,7 @@ namespace ffxivmc.Plugin
                     break;
 
                 case 17104916:
+                    LogPublisher.WriteLine("Parsing market packet");
                     if (networkPacket.MessageSize != 1160)
                     {
                         LogPublisher.WriteLine("invalid order list, wrong size");
