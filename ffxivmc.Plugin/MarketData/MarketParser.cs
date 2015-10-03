@@ -60,8 +60,15 @@ namespace ffxivmc.Plugin.MarketData
 
             }
 
-            //LogPublisher.WriteLine("parsed list");
-            //LogPublisher.WriteLine(list.ToJSON().ToString());
+            
+
+            if (String.IsNullOrEmpty(Constants.ServerName))
+            {
+                LogPublisher.WriteLine("Please set your server in settings");
+            }
+
+            list.server = Constants.ServerName;
+
             H.Post(Endpoints.MarketOrders(), list.ToJSON());
         }
 

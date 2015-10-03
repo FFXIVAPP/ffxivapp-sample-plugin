@@ -14,6 +14,7 @@ namespace ffxivmc.Plugin.MarketData
         public long Timestamp { get; set; }
         public List<MarketOrder> List { get; set; }
         public int ItemId { get; set; }
+        public String server { get; set; }
 
         public MarketOrderList()
         {
@@ -39,6 +40,8 @@ namespace ffxivmc.Plugin.MarketData
             {
                 OrderList["item"] = List[0].Item;
             }
+
+            OrderList["server"] = server;
 
             return OrderList;
         }
