@@ -9,6 +9,6 @@ namespace ffxivmc.Plugin.Utilities
     class C
     {
 
-        public static readonly Uri Host = new Uri("http://192.168.11.160:3000/");
+        public static readonly Uri Host = new Uri("http://japura.net:3000/");
     }
 }
