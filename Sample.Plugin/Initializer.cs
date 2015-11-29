@@ -40,10 +40,6 @@ namespace Sample.Plugin
 {
     internal static class Initializer
     {
-        #region Declarations
-
-        #endregion
-
         /// <summary>
         /// </summary>
         public static void LoadSettings()
@@ -89,5 +85,9 @@ namespace Sample.Plugin
         {
             flowDoc._FD.Background = new SolidColorBrush(Settings.Default.ChatBackgroundColor);
         }
+
+        #region Declarations
+
+        #endregion
     }
 }

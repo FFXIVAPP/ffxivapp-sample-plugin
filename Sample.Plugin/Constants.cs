@@ -44,7 +44,7 @@ namespace Sample.Plugin
 
         public const string LibraryPack = "pack://application:,,,/Sample.Plugin;component/";
 
-        public static readonly string[] Supported = new[]
+        public static readonly string[] Supported =
         {
             "en"
         };

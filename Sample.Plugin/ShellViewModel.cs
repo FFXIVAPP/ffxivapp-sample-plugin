@@ -36,21 +36,6 @@ namespace Sample.Plugin
 {
     public sealed class ShellViewModel : INotifyPropertyChanged
     {
-        #region Property Bindings
-
-        private static ShellViewModel _instance;
-
-        public static ShellViewModel Instance
-        {
-            get { return _instance ?? (_instance = new ShellViewModel()); }
-        }
-
-        #endregion
-
-        #region Declarations
-
-        #endregion
-
         public ShellViewModel()
         {
             Initializer.LoadSettings();
@@ -66,6 +51,21 @@ namespace Sample.Plugin
         private static void DefaultOnPropertyChanged(object sender, PropertyChangedEventArgs propertyChangedEventArgs)
         {
         }
+
+        #region Property Bindings
+
+        private static ShellViewModel _instance;
+
+        public static ShellViewModel Instance
+        {
+            get { return _instance ?? (_instance = new ShellViewModel()); }
+        }
+
+        #endregion
+
+        #region Declarations
+
+        #endregion
 
         #region Loading Functions
 

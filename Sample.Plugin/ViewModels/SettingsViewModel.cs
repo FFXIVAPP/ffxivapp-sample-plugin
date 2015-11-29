@@ -40,33 +40,14 @@ namespace Sample.Plugin.ViewModels
 {
     internal sealed class SettingsViewModel : INotifyPropertyChanged
     {
-        #region Property Bindings
-
-        private static SettingsViewModel _instance;
-
-        public static SettingsViewModel Instance
-        {
-            get { return _instance ?? (_instance = new SettingsViewModel()); }
-        }
-
-        #endregion
-
-        #region Declarations
-
-        public ICommand ClearChatLogCommand { get; private set; }
-
-        #endregion
-
         public SettingsViewModel()
         {
             ClearChatLogCommand = new DelegateCommand(ClearChatLog);
         }
 
-        #region Loading Functions
+        #region Declarations
 
-        #endregion
-
-        #region Utility Functions
+        public ICommand ClearChatLogCommand { get; private set; }
 
         #endregion
 
@@ -97,6 +78,25 @@ namespace Sample.Plugin.ViewModels
             };
             PluginViewModel.Instance.PopupResultChanged += resultChanged;
         }
+
+        #endregion
+
+        #region Property Bindings
+
+        private static SettingsViewModel _instance;
+
+        public static SettingsViewModel Instance
+        {
+            get { return _instance ?? (_instance = new SettingsViewModel()); }
+        }
+
+        #endregion
+
+        #region Loading Functions
+
+        #endregion
+
+        #region Utility Functions
 
         #endregion
 
