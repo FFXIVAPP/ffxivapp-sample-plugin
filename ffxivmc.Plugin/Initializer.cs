@@ -1,8 +1,4 @@
-<<<<<<< HEAD:ffxivmc.Plugin/Initializer.cs
-﻿// ffxivmc.Plugin
-=======
 ﻿// Sample.Plugin ~ Initializer.cs
->>>>>>> f1615103e5d493ca772011c69082a46094c32650:Sample.Plugin/Initializer.cs
 // Initializer.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved

@@ -1,8 +1,5 @@
-<<<<<<< HEAD:ffxivmc.Plugin/ViewModels/SettingsViewModel.cs
-﻿// ffxivmc.Plugin
-=======
+
 ﻿// Sample.Plugin ~ SettingsViewModel.cs
->>>>>>> f1615103e5d493ca772011c69082a46094c32650:Sample.Plugin/ViewModels/SettingsViewModel.cs
 // SettingsViewModel.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved

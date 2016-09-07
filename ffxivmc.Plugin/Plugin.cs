@@ -1,8 +1,5 @@
-<<<<<<< HEAD:ffxivmc.Plugin/Plugin.cs
-﻿// ffxivmc.Plugin
-=======
+
 ﻿// Sample.Plugin ~ Plugin.cs
->>>>>>> f1615103e5d493ca772011c69082a46094c32650:Sample.Plugin/Plugin.cs
 // Plugin.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved

@@ -1,8 +1,5 @@
-<<<<<<< HEAD:ffxivmc.Plugin/Views/AboutView.xaml.cs
-﻿// ffxivmc.Plugin
-=======
+
 ﻿// Sample.Plugin ~ AboutView.xaml.cs
->>>>>>> f1615103e5d493ca772011c69082a46094c32650:Sample.Plugin/Views/AboutView.xaml.cs
 // AboutView.xaml.cs
 // 
 // Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
