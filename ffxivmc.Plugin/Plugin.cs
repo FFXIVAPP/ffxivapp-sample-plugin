@@ -106,7 +106,7 @@ namespace ffxivmc.Plugin
         public void Initialize(IPluginHost pluginHost)
         {
             Host = pluginHost;
-            FriendlyName = "Sample";
+            FriendlyName = "FFXIVMC";
             Name = AssemblyHelper.Name;
             Icon = "Logo.png";
             Description = AssemblyHelper.Description;

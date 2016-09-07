@@ -8,7 +8,7 @@ namespace ffxivmc.Plugin.Utilities
 {
     class C
     {
-
-        public static readonly Uri Host = new Uri("https://japura.net/ffxivmc/");
+        //note: market order endpoints are not fully implemented yet
+        public static readonly Uri Host = new Uri("https://ffxivmc-1361.appspot.com/api/v1/marketOrder");
     }
 }
