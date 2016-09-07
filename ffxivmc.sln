@@ -1,8 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.31101.0
-MinimumVisualStudioVersion = 10.0.40219.1
+# Visual Studio Express 2012 for Windows Desktop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ffxivmc", "ffxivmc.Plugin\ffxivmc.csproj", "{A5FC9B05-33BB-4169-8881-573549414A17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BF238003-1271-4A6F-B936-3EBAF1509D04}"
@@ -12,16 +10,44 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BF2380
 		.nuget\NuGet.targets = .nuget\NuGet.targets
 	EndProjectSection
 EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "FFXIVAPP.Client", "distribution\FFXIVAPP.Client.exe", "{60129E67-F3A0-4B7D-8AAB-826DACC32887}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = C:\Users\monofuel\Documents\GitHub\ffxivapp-ffxivmc-plugin\distribution\FFXIVAPP.Client.exe
+		RemoteMachine = DESKTOP-51VAN59
+		StartingDirectory = C:\Users\monofuel\Documents\GitHub\ffxivapp-ffxivmc-plugin\distribution
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		LaunchSQLEngine = No
+		AttachLaunchAction = No
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|Mixed Platforms = Debug|Mixed Platforms
 		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|Mixed Platforms = Release|Mixed Platforms
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Debug|Mixed Platforms.ActiveCfg = Debug|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Debug|Mixed Platforms.Build.0 = Debug|x86
 		{A5FC9B05-33BB-4169-8881-573549414A17}.Debug|x86.ActiveCfg = Debug|x86
 		{A5FC9B05-33BB-4169-8881-573549414A17}.Debug|x86.Build.0 = Debug|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|Any CPU.ActiveCfg = Release|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|Mixed Platforms.ActiveCfg = Release|x86
+		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|Mixed Platforms.Build.0 = Release|x86
 		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|x86.ActiveCfg = Release|x86
 		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|x86.Build.0 = Release|x86
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|x86.ActiveCfg = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

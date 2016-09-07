@@ -32,9 +32,9 @@ namespace ffxivmc.Plugin.Localization
         {
             Dictionary.Clear();
             Dictionary.Add("sample_", "PLACEHOLDER");
-            Dictionary.Add("sample_ChatLogTabHeader", "Chat");
-            Dictionary.Add("sample_ClearChatLogMessage", "Clear ChatLogFD");
-            Dictionary.Add("sample_ClearChatLogToolTip", "Clear Chat");
+            Dictionary.Add("sample_ChatLogTabHeader", "Item Log");
+            Dictionary.Add("sample_ClearChatLogMessage", "Clear Item Log");
+            Dictionary.Add("sample_ClearChatLogToolTip", "Clear Item Log");
             return Dictionary;
         }
     }

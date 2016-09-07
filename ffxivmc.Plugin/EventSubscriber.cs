@@ -284,7 +284,7 @@ namespace ffxivmc.Plugin
 
             //BitConverter.ToString(networkPacket.Buffer)
 
-            //LogPublisher.WriteLine(debug_output);
+            LogPublisher.WriteLine("Packet picked up");
             //Logging.Log(LogManager.GetCurrentClassLogger(), debug_output);
 
 
