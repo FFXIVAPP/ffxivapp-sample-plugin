@@ -53,7 +53,7 @@ namespace ffxivmc.Plugin.MarketData
             Order["quantity"] = Quantity;
             Order["hq"] = HQ;
             Order["total"] = Total;
-            Order["marketcode"] = MarketCode;
+            Order["marketCode"] = MarketCode;
             Order["retainer"] = Retainer;
 
             return Order;

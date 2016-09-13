@@ -284,7 +284,7 @@ namespace ffxivmc.Plugin
 
             //BitConverter.ToString(networkPacket.Buffer)
 
-            LogPublisher.WriteLine("Packet picked up");
+            //LogPublisher.WriteLine("Packet picked up");
             //Logging.Log(LogManager.GetCurrentClassLogger(), debug_output);
 
 
@@ -304,7 +304,7 @@ namespace ffxivmc.Plugin
                     LogPublisher.WriteLine("Parsing market packet");
                     if (networkPacket.MessageSize != 1160)
                     {
-                        LogPublisher.WriteLine("invalid order list, wrong size");
+                        LogPublisher.WriteLine("invalid order list, wrong size. expected 1160, got " + networkPacket.MessageSize);
                         break;
                     }
                     //list of market orders

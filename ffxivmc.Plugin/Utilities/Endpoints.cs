@@ -11,7 +11,7 @@ namespace ffxivmc.Plugin.Utilities
     {
         public static Uri MarketOrders()
         {
-            return new Uri(C.Host, "marketorder");
+            return new Uri(Constants.Host, "/api/v1/marketList/");
         }
 
     }

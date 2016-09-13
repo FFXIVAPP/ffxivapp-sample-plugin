@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ffxivmc.Plugin.Utilities
 {
-    static class T
+    static class MCTask
     {
         public static Task RunOnThread(Action A)
         {

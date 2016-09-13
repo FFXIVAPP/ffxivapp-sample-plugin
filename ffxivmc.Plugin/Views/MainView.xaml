@@ -25,12 +25,14 @@
     <Grid x:Name="LayoutRoot"
           DataContext="{StaticResource MainViewModel}">
         <StackPanel>
-            <TabControl>
-                <TabItem Header="{Binding Locale[sample_ChatLogTabHeader],
-                                          Source={StaticResource PluginViewModel}}">
-                    <Controls:xFlowDocument x:Name="ChatLogFD" />
-                </TabItem>
-            </TabControl>
+            <ListView x:Name="OutputListView"  VerticalContentAlignment="Stretch" HorizontalContentAlignment="Stretch">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Text" DisplayMemberBinding="{Binding Text}" Width="200"/>
+                        <GridViewColumn Header="Time" DisplayMemberBinding="{Binding Time}"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
         </StackPanel>
     </Grid>
 </UserControl>

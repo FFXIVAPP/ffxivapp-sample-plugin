@@ -18,7 +18,7 @@ namespace ffxivmc.Plugin.MarketData
 
         public MarketOrderList()
         {
-            Timestamp = T.UnixTimeNow();
+            Timestamp = MCTask.UnixTimeNow();
             List = new List<MarketOrder>();
         }
 
@@ -38,7 +38,7 @@ namespace ffxivmc.Plugin.MarketData
 
             if (List.Count > 0)
             {
-                OrderList["item"] = List[0].Item;
+                OrderList["itemID"] = List[0].Item;
             }
 
             OrderList["server"] = server;

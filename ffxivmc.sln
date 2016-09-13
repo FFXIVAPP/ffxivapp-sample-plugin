@@ -1,6 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Express 2012 for Windows Desktop
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ffxivmc", "ffxivmc.Plugin\ffxivmc.csproj", "{A5FC9B05-33BB-4169-8881-573549414A17}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{BF238003-1271-4A6F-B936-3EBAF1509D04}"
@@ -18,6 +20,7 @@ Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "FFXIVAPP.Client", "distribu
 		StartingDirectory = C:\Users\monofuel\Documents\GitHub\ffxivapp-ffxivmc-plugin\distribution
 		Environment = Default
 		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
 		LaunchSQLEngine = No
 		AttachLaunchAction = No
 	EndProjectSection
@@ -42,12 +45,12 @@ Global
 		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|Mixed Platforms.Build.0 = Release|x86
 		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|x86.ActiveCfg = Release|x86
 		{A5FC9B05-33BB-4169-8881-573549414A17}.Release|x86.Build.0 = Release|x86
-		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|Mixed Platforms.ActiveCfg = Debug|Any CPU
-		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|x86.ActiveCfg = Debug|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|Any CPU.ActiveCfg = Release|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Debug|x86.ActiveCfg = Release|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|Mixed Platforms.ActiveCfg = Release|Any CPU
+		{60129E67-F3A0-4B7D-8AAB-826DACC32887}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

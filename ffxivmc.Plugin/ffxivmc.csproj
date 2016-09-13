@@ -114,11 +114,11 @@
       <DependentUpon>ShellView.xaml</DependentUpon>
     </Compile>
     <Compile Include="ShellViewModel.cs" />
-    <Compile Include="Utilities\C.cs" />
+    <Compile Include="Utilities\Constants.cs" />
     <Compile Include="Utilities\Endpoints.cs" />
-    <Compile Include="Utilities\H.cs" />
+    <Compile Include="Utilities\HTTP.cs" />
     <Compile Include="Utilities\LogPublisher.cs" />
-    <Compile Include="Utilities\T.cs" />
+    <Compile Include="Utilities\Task.cs" />
     <Compile Include="ViewModels\SettingsViewModel.cs" />
     <Compile Include="ViewModels\AboutViewModel.cs" />
     <Compile Include="ViewModels\MainViewModel.cs" />

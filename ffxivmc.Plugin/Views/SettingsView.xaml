@@ -22,14 +22,8 @@
     <Grid x:Name="LayoutRoot"
           DataContext="{StaticResource SettingsViewModel}">
         <StackPanel>
-            <Button Command="{Binding ClearChatLogCommand}"
-                    ToolTip="{Binding Locale[sample_ClearChatLogToolTip],
-                                      Source={StaticResource PluginViewModel}}">
-                <Image Width="16"
-                       Height="16"
-                       RenderOptions.BitmapScalingMode="HighQuality"
-                       Source="/ffxivmc.Plugin;component/Media/Images/Refresh.png" />
-            </Button>
+            <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="TODO: put stuff here."/>
+
         </StackPanel>
     </Grid>
 </UserControl>

@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace ffxivmc.Plugin.Utilities
 {
-    class H
+    class HTTP
     {
         public static void Post(Uri Destination, JObject Data)
         {
@@ -21,7 +21,6 @@ namespace ffxivmc.Plugin.Utilities
             try
             {
                 var response = client.PostAsync(Destination, content);
-                //LogPublisher.WriteLine("Posted");
             }
             catch (Exception e)
             {
