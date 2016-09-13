@@ -1,33 +1,30 @@
-## Initial Release:
-Please make sure you change the GUID in the sample. A good idea would be to open the project up in VS2012 and export the entire thing as a project template.
 
-Once you do that; you can create new project as you go and rename them to what you need. The build locations would need to be updated as well as the GUID in this case.
+Somehow I was lucky enough to get this working again as of 9/12/2016
 
-## Requirements
+![wubba lubba dub dub](/screenshot.png?raw=true "Main View")
 
-* Nuget package manager
- * Restore packages once installed
-* VS2012
-* .NET4.5 installed
+## Site
+Server is being redesigned at a new address:
+https://ffxivmc-1361.appspot.com/
 
-You will have to copy the following files from the most recent version of the app and update the system references:
+## Installation
+download net.japura.ffxivmc.zip and unzip it to the plugins folder for FFXIVAPP
+set your server in character settings
 
-* FFXIVAPP.Common.dll
-* FFXIVAPP.IPluginInterface.dll
-* MahApps.Metro.dll
-* System.Windows.Interactivity.dll
+The plugin only works if ffxivapp can parse your network traffic. this can be a bit finnicky.
 
-## Notes:
+Winpcap is good, however it does not work on windows 10. Maybe win10pcap will work with some fiddling?
 
-I've tried to give an example of most of the binding features available. The majority of the official plugins off the site are nearly 100% data bound so nothing appears in the app unless there's actual data.
+If you are unfortunately on windows 10 like I am:
+- run ffxivapp as admin
+- set your network interface
+- enable network reading
+- set winpcap to OFF
 
-If you have a question please post it in the issues section as such and I can address the response there for everyone to see.
+the plugin should say "initialized" with the current timestamp.
 
-Thanks!
+Go to the market board and start looking at items. a ton of crap should be output on the main view for ffxivmc. this means it's working! good job.
 
-## Entry Point:
-
-* The log entry point to use what comes from the chat is under Utilities\LogPublishers\Process()
-* The tab/window entry point is ShellView.xaml; with loading functions defined in the .cs file
-* There is an option to make your plugin acts as a window which means once it's added to the main application you can make it have a separate appearance for the window.
-* Plugin entry point is Plugin.cs and controls the plugin info/other functionality of commands being sent and recieved.
+##TODO
+- make UI less crappy, my WPF skills are rusty.
+- add setting input for api key once auth stuff is setup on the server
