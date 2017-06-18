@@ -1,7 +1,6 @@
 ﻿// Sample.Plugin ~ SettingsViewModel.cs
-// SettingsViewModel.cs
 // 
-// Copyright © 2007 - 2015 Ryan Wilson - All Rights Reserved
+// Copyright © 2007 - 2017 Ryan Wilson - All Rights Reserved
 // 
 // This program is free software: you can redistribute it and/or modify
 // it under the terms of the GNU General Public License as published by
@@ -60,8 +59,7 @@ namespace Sample.Plugin.ViewModels
                     case "OK":
                         MainView.View.ChatLogFD._FD.Blocks.Clear();
                         break;
-                    case "Cancel":
-                        break;
+                    case "Cancel": break;
                 }
                 PluginViewModel.Instance.PopupResultChanged -= resultChanged;
             };
